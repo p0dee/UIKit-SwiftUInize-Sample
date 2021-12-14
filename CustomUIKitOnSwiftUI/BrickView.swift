@@ -9,9 +9,9 @@ import Foundation
 import SwiftUI
 
 struct BrickView: UIViewRepresentable {
-    @Binding var items: [String]
+    @Binding private var items: [String]
 
-    var onSelectItemCallback: ((String) -> Void)?
+    private var onSelectItemCallback: ((String) -> Void)?
 
     init(items: Binding<[String]>) {
         _items = items
